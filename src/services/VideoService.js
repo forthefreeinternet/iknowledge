@@ -1,19 +1,21 @@
 import Api from '@/services/Api'
+import dApi from '@/services/dApi'
 
 export default {
   getAll(data, params) {
-    return Api().get(`videos/${data}`, {
+    return dApi().get(`videos/${data}`, {
       params
     })
   },
   getById(id) {
-    return Api().get(`videos/${id}`)
+    return dApi().get(`videos/${id}`)
   },
   uploadVideo(data, optional) {
-    return Api().post('videos', data, optional)
+    console.log(data,optional)
+    return dApi().post('videos', data, optional)   
   },
   updateVideo(id, data) {
-    return Api().put(`videos/${id}`, data)
+    return dApi().put(`videos/${id}`, data)
   },
   updateViews(id) {
     return Api().put(`videos/${id}/views`)

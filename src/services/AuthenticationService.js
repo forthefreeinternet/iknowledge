@@ -1,11 +1,12 @@
 import Api from '@/services/Api'
+import dApi from '@/services/dApi'
 
 export default {
   signIn(credentials) {
-    return Api().post('auth/login', credentials)
+    return dApi().post('auth/login', credentials)
   },
   signUp(data) {
-    return Api().post('auth/register', data)
+    return dApi().post('auth/register', data)
   },
   updateUserDetails(data) {
     return Api().put('auth/updatedetails', data)
@@ -17,8 +18,8 @@ export default {
     return Api().put('auth/updatepassword', data)
   },
   me(token) {
-    return Api().post('auth/me', {
-      headers: { Authorization: `Bearer ${token}` }
+    return dApi().post('auth/me', {
+      headers: { authorization: `Bearer ${token}` }
     })
   }
 }

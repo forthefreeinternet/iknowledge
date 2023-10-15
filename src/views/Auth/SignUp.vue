@@ -5,9 +5,9 @@
         <v-card class="" outlined :loading="loading">
           <v-row class="justify-space-between px-4 pt-6 pb-12">
             <v-col cols="12" sm="12" md="6">
-              <v-card-title class="text-center">VueTube</v-card-title>
+              <v-card-title class="text-center">WorldBrain</v-card-title>
               <v-card-subtitle class="mb-5"
-                >Create your VueTube account</v-card-subtitle
+                >Create your WorldBrain account</v-card-subtitle
               >
               <v-card-text>
                 <ValidationObserver ref="form" v-slot="{ handleSubmit, reset }">
@@ -252,17 +252,25 @@ export default {
           const errors = err.response.data.error
 
           this.$refs.form.setErrors({
-            'Email': errors.find((error) => {
-              return error.field === 'email'
-            })
+            'Email': errors === 'This email is already taken'
               ? ['This email is already taken']
               : null,
-            'Channel Name': errors.find((error) => {
-              return error.field === 'channelName'
-            })
+            'Channel Name': errors === 'This channel name is already taken'
               ? ['This channel name is already taken']
               : null
           })
+          // this.$refs.form.setErrors({
+          //   'Email': errors.find((error) => {
+          //     return error.field === 'email'
+          //   })
+          //     ? ['This email is already taken']
+          //     : null,
+          //   'Channel Name': errors.find((error) => {
+          //     return error.field === 'channelName'
+          //   })
+          //     ? ['This channel name is already taken']
+          //     : null
+          // })
         })
 
       if (!data) return

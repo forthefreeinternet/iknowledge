@@ -8,7 +8,7 @@
     :to="`/watch/${video._id}`"
   >
     <v-img
-      :src="`${url}/uploads/thumbnails/${video.thumbnailUrl}`"
+      :src="`https://ipfs.io/ipfs/bafybeibd3nuryjpflpvftsx5ps3d4rr4qjp63xtedtigtjfu7cgtj7o24e/headshot.png`"
 
     ></v-img>
     <v-row no-gutters>

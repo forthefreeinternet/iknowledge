@@ -13,6 +13,11 @@ import {
 import Vuebar from 'vuebar'
 // import InfiniteLoading from 'vue-infinite-loading'
 
+// create server
+import './server/app.js'
+// import dotenv from 'dotenv'
+// dotenv.config({ path: './config/.env' })
+console.log(process.env.VUE_APP_JWT_SECRET)
 setInteractionMode('eager')
 
 extend('required', {

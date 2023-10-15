@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="font-weight-bold"
         ><router-link to="/" class="black--text" style="text-decoration: none"
-          >VueTube</router-link
+          >WorldBrain</router-link
         ></v-toolbar-title
       >
       <v-spacer></v-spacer>
@@ -139,7 +139,7 @@
               <v-list-item-icon>
                 <v-icon>mdi-youtube-studio</v-icon>
               </v-list-item-icon>
-              <v-list-item-title>VueTube Studio</v-list-item-title>
+              <v-list-item-title>WorldBrain Studio</v-list-item-title>
             </v-list-item>
             <v-list-item @click="signOut">
               <v-list-item-icon>

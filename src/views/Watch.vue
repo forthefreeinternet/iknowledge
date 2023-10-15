@@ -415,12 +415,7 @@ export default {
       if (!this.loaded) {
         this.loading = true
       }
-      const videos = await VideoService.getAll('public', { page: this.page })
-        .catch((err) => {
-          console.log(err)
-          this.errored = true
-        })
-        .finally(() => (this.loading = false))
+      const videos = null
 
       if (typeof videos === 'undefined') return
 

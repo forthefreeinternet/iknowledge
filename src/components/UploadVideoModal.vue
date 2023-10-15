@@ -235,7 +235,7 @@ export default {
           `Video size should be less than 5 MB!, ${value.size}`,
       ],
       categoriesTitles: [],
-      categories: [],
+      categories: ['1 to 1','<20'],
       visibilty: ["Public", "Private"],
       selectedFile: [],
       formData: {
@@ -334,6 +334,7 @@ export default {
     },
     async getCategories() {
       this.categoryLoading = true;
+      console.log('trying to get categories')
       const categories = await CategoryService.getAll()
         .catch((err) => {
           console.log(err);
